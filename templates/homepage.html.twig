@@ -12,13 +12,13 @@
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
                     <img src="{{ asset('icons/bitcoin.png') }}" class="ico-coin">
-                    <h2 class="my-0 font-weight-normal">Bitcoin</h2>
+                    <h2 class="my-0 font-weight-normal">{{ coin.type }}</h2>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title pricing-card-title">
-                        <small class="text-muted">hoy vale: </small> xxx €
+                        <small class="text-muted">hoy vale: </small> {{ coin.currentValue }} €
                     </h3>
-                    <p>Valor mínimo <code>xx€</code>, valor máximo <code>xx€</code>
+                    <p>Valor mínimo <code>{{ coin.minValue }}€</code>, valor máximo <code>{{ coin.maxValue }}€</code>
                     </p>
                     <a href="{{ path('homepage') }}" class="btn btn-lg btn-block btn-outline-warning">¡Quiero otra!</a>
                     <a href="{{ path('save') }}" class="btn btn-lg btn-block btn-outline-success">Guardar</a>

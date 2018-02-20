@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Data\Coins;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -11,9 +12,11 @@ class AppCoinController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function homepage()
+    public function homepage(Coins $coins)
     {
-        return $this->render('homepage.html.twig');
+        return $this->render('homepage.html.twig', [
+            'coin' => $coins->getOneRandom()
+        ]);
     }
 
     /**
