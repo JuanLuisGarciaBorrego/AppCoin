@@ -17,7 +17,7 @@
             {% for coin in coins %}
                 <tr>
                     <th scope="row">#{{ loop.index }}</th>
-                    <td><img src="{{ asset('icons/bitcoin.png') }}" class="ico-coin"></td>
+                    <td><img src="{{ asset(coin.ico, 'icons') }}" class="ico-coin"></td>
                     <td>{{ coin.type }}</td>
                     <td>{{ coin.currentValue }}$</td>
                 </tr>
