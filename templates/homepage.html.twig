@@ -21,7 +21,7 @@
                     <p>Valor mínimo <code>{{ coin.minValue }}€</code>, valor máximo <code>{{ coin.maxValue }}€</code>
                     </p>
                     <a href="{{ path('homepage') }}" class="btn btn-lg btn-block btn-outline-warning">¡Quiero otra!</a>
-                    <a href="{{ path('save') }}" class="btn btn-lg btn-block btn-outline-success">Guardar</a>
+                    <a href="{{ path('save', {'key': coin.key, 'currentValue': coin.currentValue}) }}" class="btn btn-lg btn-block btn-outline-success">Guardar</a>
                 </div>
             </div>
         </div>

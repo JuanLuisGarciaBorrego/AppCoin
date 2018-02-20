@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 use App\Data\Coins;
+use App\Entity\Wallet;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -35,10 +36,22 @@ class AppCoinController extends Controller
     }
 
     /**
-     * @Route("/save", name="save")
+     * @Route("/save/{key}/{currentValue}/", name="save")
      */
-    public function save()
+    public function save($key, $currentValue)
     {
+        $coin = $this->coins->getOneByArrayKey($key);
+
+        $wallet = new Wallet();
+        $wallet->setType($coin['type']);
+        $wallet->setIco($coin['ico']);
+        $wallet->setCurrentValue($currentValue);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($wallet);
+
+        $em->flush();
+
         return $this->redirectToRoute('wallet');
     }
 }
