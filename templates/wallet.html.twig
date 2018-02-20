@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>My wallet</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Icono</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">#1</th>
+                    <td><img src="./icons/bitcoin.png" class="ico-coin"></td>
+                    <td>Bitcoin</td>
+                    <td>xxx$</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="" class="btn btn-xs btn-block btn-outline-danger">Añadir otro</a>
+
+    </div>
+{% endblock %}
