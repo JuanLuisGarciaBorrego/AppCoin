@@ -1,0 +1,52 @@
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-deck{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.card-header h2{
+    display: inline;
+}
+
+.ico-coin{
+    height: 35px;
+    padding: 1px;
+    position:relative;
+    top: -5px;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+
+.m-top-fixed{
+    margin-top: 100px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.header-logo{
+    height: 35px;
+    top: -2px;
+    position: relative;
+}
