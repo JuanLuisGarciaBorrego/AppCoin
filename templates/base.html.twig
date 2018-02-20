@@ -4,19 +4,19 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="./css/bootstrap.min.css">
-            <link rel="stylesheet" href="./css/theme.css">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
         {% endblock %}
     </head>
     <body>
 
         <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow fixed-top">
-            <img src="./img/wallet.png" class="header-logo">
+            <img src="{{ asset('icons/wallet.png') }}" class="header-logo">
             <h5 class="my-0 mr-md-auto font-weight-normal">AppCoin</h5>
             <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-dark" href="">Homepage</a>
+                <a class="p-2 text-dark" href="{{ path('homepage') }}">Homepage</a>
             </nav>
-            <a class="btn btn-outline-primary" href="">Cartera</a>
+            <a class="btn btn-outline-primary" href="{{ path('wallet') }}">Cartera</a>
         </header>
 
         <div class="m-top-fixed">

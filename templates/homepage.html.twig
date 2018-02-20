@@ -11,7 +11,7 @@
         <div class="card-deck mb-3 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <img src="./icons/bitcoin.png" class="ico-coin">
+                    <img src="{{ asset('icons/bitcoin.png') }}" class="ico-coin">
                     <h2 class="my-0 font-weight-normal">Bitcoin</h2>
                 </div>
                 <div class="card-body">
@@ -20,8 +20,8 @@
                     </h3>
                     <p>Valor mínimo <code>xx€</code>, valor máximo <code>xx€</code>
                     </p>
-                    <a href="" class="btn btn-lg btn-block btn-outline-warning">¡Quiero otra!</a>
-                    <a href="" class="btn btn-lg btn-block btn-outline-success">Guardar</a>
+                    <a href="{{ path('homepage') }}" class="btn btn-lg btn-block btn-outline-warning">¡Quiero otra!</a>
+                    <a href="{{ path('save') }}" class="btn btn-lg btn-block btn-outline-success">Guardar</a>
                 </div>
             </div>
         </div>

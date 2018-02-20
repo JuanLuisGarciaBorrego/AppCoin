@@ -16,13 +16,13 @@
             <tbody>
                 <tr>
                     <th scope="row">#1</th>
-                    <td><img src="./icons/bitcoin.png" class="ico-coin"></td>
+                    <td><img src="{{ asset('icons/bitcoin.png') }}" class="ico-coin"></td>
                     <td>Bitcoin</td>
                     <td>xxx$</td>
                 </tr>
             </tbody>
         </table>
-        <a href="" class="btn btn-xs btn-block btn-outline-danger">Añadir otro</a>
+        <a href="{{ path('homepage') }}" class="btn btn-xs btn-block btn-outline-danger">Añadir otro</a>
 
     </div>
 {% endblock %}
