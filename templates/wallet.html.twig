@@ -14,12 +14,14 @@
                 </tr>
             </thead>
             <tbody>
+            {% for coin in coins %}
                 <tr>
-                    <th scope="row">#1</th>
+                    <th scope="row">#{{ loop.index }}</th>
                     <td><img src="{{ asset('icons/bitcoin.png') }}" class="ico-coin"></td>
-                    <td>Bitcoin</td>
-                    <td>xxx$</td>
+                    <td>{{ coin.type }}</td>
+                    <td>{{ coin.currentValue }}$</td>
                 </tr>
+            {% endfor %}
             </tbody>
         </table>
         <a href="{{ path('homepage') }}" class="btn btn-xs btn-block btn-outline-danger">Añadir otro</a>

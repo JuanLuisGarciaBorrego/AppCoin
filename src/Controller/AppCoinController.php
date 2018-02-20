@@ -32,7 +32,9 @@ class AppCoinController extends Controller
      */
     public function wallet()
     {
-        return $this->render('wallet.html.twig');
+        return $this->render('wallet.html.twig', [
+            'coins' => $this->getDoctrine()->getRepository(Wallet::class)->findAll()
+        ]);
     }
 
     /**
