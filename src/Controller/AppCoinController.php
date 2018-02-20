@@ -9,13 +9,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AppCoinController extends Controller
 {
+    private $coins;
+
+    public function __construct(Coins $coins)
+    {
+        $this->coins = $coins;
+    }
+
     /**
      * @Route("/", name="homepage")
      */
-    public function homepage(Coins $coins)
+    public function homepage()
     {
         return $this->render('homepage.html.twig', [
-            'coin' => $coins->getOneRandom()
+            'coin' => $this->coins->getOneRandom()
         ]);
     }
 
